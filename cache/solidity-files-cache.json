@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\LOQ\\Downloads\\Kleoscode3.0\\Kleoscode3.0\\blockklear-frontend\\src\\contracts\\KYCHashStore.sol": {
+      "lastModificationDate": 1752873220479,
+      "contentHash": "68983139b1d6180b8308f403cc729f0f",
+      "sourceName": "src/contracts/KYCHashStore.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "KYCHashStore"
+      ]
+    }
+  }
+}

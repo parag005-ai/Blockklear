@@ -1,0 +1,66 @@
+# ===========================================
+# Git Attributes for BlockKlear Project
+# ===========================================
+# Ensures proper handling of different file types
+
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Source code
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Solidity smart contracts
+*.sol text eol=lf
+
+# Configuration files
+*.config.js text eol=lf
+*.config.ts text eol=lf
+.env* text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# Documentation
+README* text eol=lf
+LICENSE text eol=lf
+CHANGELOG* text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.zip binary
+*.tar.gz binary
+
+# Node.js
+package.json text eol=lf
+package-lock.json text eol=lf
+yarn.lock text eol=lf
+
+# Ensure shell scripts have correct line endings
+*.sh text eol=lf
+
+# Windows batch files
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Linguist language detection
+*.sol linguist-language=Solidity
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript

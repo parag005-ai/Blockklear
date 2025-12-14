@@ -1,0 +1,180 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "KYCHashStore",
+  "sourceName": "src/contracts/KYCHashStore.sol",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "hash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "KYCStored",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "oldHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "newHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "KYCUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "getKYCHash",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "hasKYC",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "isKYCVerified",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "kycHash",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_hash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "storeKYC",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_hash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "verifyKYC",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b50610322806100206000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c806305364096146100675780635249e862146100a357806354b7636e146100df5780636bf127c014610102578063a5b50ee214610117578063d7ed6f141461012a575b600080fd5b61009061007536600461028e565b6001600160a01b031660009081526020819052604090205490565b6040519081526020015b60405180910390f35b6100cf6100b136600461028e565b6001600160a01b031660009081526001602052604090205460ff1690565b604051901515815260200161009a565b6100cf6100ed36600461028e565b60016020526000908152604090205460ff1681565b6101156101103660046102a9565b61014a565b005b6100cf6101253660046102c2565b610245565b61009061013836600461028e565b60006020819052908152604090205481565b806101925760405162461bcd60e51b8152602060048201526014602482015273486173682063616e6e6f7420626520656d70747960601b604482015260640160405180910390fd5b336000908152602081815260408083208054908590556001928390529220805460ff19169091179055801561020a578181336001600160a01b03167f161e4e10ae8c8e7bddc82c819444417dabef775813420dfd504fac79fe5ecb0b426040516101fe91815260200190565b60405180910390a45050565b604051428152829033907f45dad2c06ba602c18eb71ecf7366723466e1e57ce6d4483f8354ebaf5bec43d89060200160405180910390a35050565b6001600160a01b0382166000908152602081905260408120548214801561026b57508115155b9392505050565b80356001600160a01b038116811461028957600080fd5b919050565b6000602082840312156102a057600080fd5b61026b82610272565b6000602082840312156102bb57600080fd5b5035919050565b600080604083850312156102d557600080fd5b6102de83610272565b94602093909301359350505056fea2646970667358221220026bda82b289d64ccc37915f4785c0be6aae83ed992e18a5e50a6e69419351cd64736f6c63430008130033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c806305364096146100675780635249e862146100a357806354b7636e146100df5780636bf127c014610102578063a5b50ee214610117578063d7ed6f141461012a575b600080fd5b61009061007536600461028e565b6001600160a01b031660009081526020819052604090205490565b6040519081526020015b60405180910390f35b6100cf6100b136600461028e565b6001600160a01b031660009081526001602052604090205460ff1690565b604051901515815260200161009a565b6100cf6100ed36600461028e565b60016020526000908152604090205460ff1681565b6101156101103660046102a9565b61014a565b005b6100cf6101253660046102c2565b610245565b61009061013836600461028e565b60006020819052908152604090205481565b806101925760405162461bcd60e51b8152602060048201526014602482015273486173682063616e6e6f7420626520656d70747960601b604482015260640160405180910390fd5b336000908152602081815260408083208054908590556001928390529220805460ff19169091179055801561020a578181336001600160a01b03167f161e4e10ae8c8e7bddc82c819444417dabef775813420dfd504fac79fe5ecb0b426040516101fe91815260200190565b60405180910390a45050565b604051428152829033907f45dad2c06ba602c18eb71ecf7366723466e1e57ce6d4483f8354ebaf5bec43d89060200160405180910390a35050565b6001600160a01b0382166000908152602081905260408120548214801561026b57508115155b9392505050565b80356001600160a01b038116811461028957600080fd5b919050565b6000602082840312156102a057600080fd5b61026b82610272565b6000602082840312156102bb57600080fd5b5035919050565b600080604083850312156102d557600080fd5b6102de83610272565b94602093909301359350505056fea2646970667358221220026bda82b289d64ccc37915f4785c0be6aae83ed992e18a5e50a6e69419351cd64736f6c63430008130033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
